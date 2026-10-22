@@ -10,7 +10,9 @@ mkdir -p "$DATA/text8" "$DATA/eval-similarity"
 if [ ! -f "$DATA/text8/text8" ]; then
   curl -fL -o "$DATA/text8/text8.zip" http://mattmahoney.net/dc/text8.zip
   # The site only serves plain HTTP, so check the archive before unpacking it.
-  echo "a6640522afe85d1963ad56c05b0ede0a0c000dddc9671758a6cc09b7a38e5232  $DATA/text8/text8.zip" | sha256sum -c -
+  # sha256sum on Linux, shasum on macOS.
+  if command -v sha256sum >/dev/null; then SHA="sha256sum"; else SHA="shasum -a 256"; fi
+  echo "a6640522afe85d1963ad56c05b0ede0a0c000dddc9671758a6cc09b7a38e5232  $DATA/text8/text8.zip" | $SHA -c -
   unzip -o "$DATA/text8/text8.zip" -d "$DATA/text8"
 fi
 

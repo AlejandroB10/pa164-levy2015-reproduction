@@ -21,7 +21,7 @@ conda activate pa164-levy2015
 # 2. Data (once, ~130 MB into ./data, which git ignores)
 ./download_data.sh
 
-# 3. Quick check (~1 min): must print "3CosAdd 0.440"
+# 3. Quick check (~1 min): must print "3CosAdd 0.440" and "OK"
 python sanity_check.py --data-dir data
 
 # 4. Full experiment (~10-30 min, depending on your CPU)
