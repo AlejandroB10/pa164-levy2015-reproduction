@@ -65,7 +65,8 @@ def cached(path, build, save, load):
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--data-dir", type=Path, required=True)
-    parser.add_argument("--out", type=Path, default=Path("results"))
+    parser.add_argument("--out", type=Path, default=Path("results-mine"),
+                        help="output folder; results/ holds the committed reference run")
     parser.add_argument("--cache-dir", type=Path, default=None,
                         help="defaults to <data-dir>/cache; holds large matrices and vectors")
     parser.add_argument("--min-count", type=int, default=5)

@@ -9,6 +9,7 @@ SGNS is not deterministic: with a different number of workers its scores can mov
 0.03 (most on the small MTurk and WordSim sets), so SGNS gets a looser tolerance.
 """
 import argparse
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -30,7 +31,8 @@ def main():
 
     missing = both[both["_merge"] != "both"]
     matched = both[both["_merge"] == "both"].copy()
-    matched["diff"] = (matched["value_mine"] - matched["value_ref"]).abs()
+    # A missing or non-numeric value counts as a mismatch, never as a match.
+    matched["diff"] = (matched["value_mine"] - matched["value_ref"]).abs().fillna(float("inf"))
     matched["tol"] = matched["method"].map(lambda m: args.sgns_tol if m == "SGNS" else args.tol)
     off = matched[matched["diff"] > matched["tol"]]
 
@@ -43,8 +45,9 @@ def main():
     if len(off):
         print(f"{len(off)} values differ by more than their tolerance:")
         print(off[keys + ["value_ref", "value_mine", "diff"]].to_string(index=False))
-    if not len(missing) and not len(off):
-        print("OK: your run matches the reference results.")
+    if len(missing) or len(off):
+        sys.exit(1)
+    print("OK: your run matches the reference results.")
 
 
 if __name__ == "__main__":

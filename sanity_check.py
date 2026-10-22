@@ -8,6 +8,7 @@ Usage:
     python sanity_check.py --data-dir PATH/TO/ML-NLP-data
 """
 import argparse
+import sys
 import time
 from pathlib import Path
 
@@ -17,6 +18,7 @@ from repro.evaluation import Space, evaluate_analogy, load_analogies
 from repro.ppmi_svd import ppmi, svd_factors, svd_vectors
 
 VOCAB_SIZE = 30_000
+EXPECTED_ADD = 0.440
 
 
 def main():
@@ -35,6 +37,9 @@ def main():
         f"sanity PPMI+SVD 30k: 3CosAdd {acc_add:.3f}  3CosMul {acc_mul:.3f}  "
         f"questions {n}/{len(questions)}  ({time.time() - t0:.0f} s)"
     )
+    if round(acc_add, 3) != EXPECTED_ADD:
+        sys.exit(f"FAIL: expected 3CosAdd {EXPECTED_ADD}, got {acc_add:.3f}")
+    print("OK: pipeline reproduces the prototype number.")
 
 
 if __name__ == "__main__":
