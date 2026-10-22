@@ -1,0 +1,10 @@
+name: pa164-levy2015
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - scipy
+  - gensim=4.4.0
+  - pandas
+  - matplotlib
