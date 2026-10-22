@@ -1,0 +1,121 @@
+config,method,role,win,params,metric,value,n_evaluated,n_total,build_seconds
+"PPMI vanilla (cds=1, neg=1)",PPMI,vanilla,2,cds=1.0 neg=1,ws_sim,0.5867,202,203,1.8000
+"PPMI vanilla (cds=1, neg=1)",PPMI,vanilla,2,cds=1.0 neg=1,ws_rel,0.5455,251,252,1.8000
+"PPMI vanilla (cds=1, neg=1)",PPMI,vanilla,2,cds=1.0 neg=1,men,0.5476,2998,3000,1.8000
+"PPMI vanilla (cds=1, neg=1)",PPMI,vanilla,2,cds=1.0 neg=1,mturk,0.5702,284,287,1.8000
+"PPMI vanilla (cds=1, neg=1)",PPMI,vanilla,2,cds=1.0 neg=1,rare_words,0.2055,951,2034,1.8000
+"PPMI vanilla (cds=1, neg=1)",PPMI,vanilla,2,cds=1.0 neg=1,simlex,0.2516,992,999,1.8000
+"PPMI vanilla (cds=1, neg=1)",PPMI,vanilla,2,cds=1.0 neg=1,google_add_30k,0.3227,12268,19544,1.8000
+"PPMI vanilla (cds=1, neg=1)",PPMI,vanilla,2,cds=1.0 neg=1,google_mul_30k,0.1273,12268,19544,1.8000
+"PPMI vanilla (cds=1, neg=1)",PPMI,vanilla,2,cds=1.0 neg=1,google_add,0.2201,17827,19544,1.8000
+"PPMI vanilla (cds=1, neg=1)",PPMI,vanilla,2,cds=1.0 neg=1,google_mul,0.0075,17827,19544,1.8000
+"SVD vanilla (cds=1, eig=0)",SVD,vanilla,2,cds=1.0 eig=0.0 w_plus_c=False,ws_sim,0.6948,202,203,0.4000
+"SVD vanilla (cds=1, eig=0)",SVD,vanilla,2,cds=1.0 eig=0.0 w_plus_c=False,ws_rel,0.6303,251,252,0.4000
+"SVD vanilla (cds=1, eig=0)",SVD,vanilla,2,cds=1.0 eig=0.0 w_plus_c=False,men,0.6455,2998,3000,0.4000
+"SVD vanilla (cds=1, eig=0)",SVD,vanilla,2,cds=1.0 eig=0.0 w_plus_c=False,mturk,0.5686,284,287,0.4000
+"SVD vanilla (cds=1, eig=0)",SVD,vanilla,2,cds=1.0 eig=0.0 w_plus_c=False,rare_words,0.3554,951,2034,0.4000
+"SVD vanilla (cds=1, eig=0)",SVD,vanilla,2,cds=1.0 eig=0.0 w_plus_c=False,simlex,0.2755,992,999,0.4000
+"SVD vanilla (cds=1, eig=0)",SVD,vanilla,2,cds=1.0 eig=0.0 w_plus_c=False,google_add_30k,0.3537,12268,19544,0.4000
+"SVD vanilla (cds=1, eig=0)",SVD,vanilla,2,cds=1.0 eig=0.0 w_plus_c=False,google_mul_30k,0.3704,12268,19544,0.4000
+"SVD vanilla (cds=1, eig=0)",SVD,vanilla,2,cds=1.0 eig=0.0 w_plus_c=False,google_add,0.2682,17827,19544,0.4000
+"SVD vanilla (cds=1, eig=0)",SVD,vanilla,2,cds=1.0 eig=0.0 w_plus_c=False,google_mul,0.2822,17827,19544,0.4000
+PPMI cds=0.75,PPMI,recommended,2,cds=0.75 neg=1,ws_sim,0.6142,202,203,0.9000
+PPMI cds=0.75,PPMI,recommended,2,cds=0.75 neg=1,ws_rel,0.5694,251,252,0.9000
+PPMI cds=0.75,PPMI,recommended,2,cds=0.75 neg=1,men,0.5673,2998,3000,0.9000
+PPMI cds=0.75,PPMI,recommended,2,cds=0.75 neg=1,mturk,0.5818,284,287,0.9000
+PPMI cds=0.75,PPMI,recommended,2,cds=0.75 neg=1,rare_words,0.2499,951,2034,0.9000
+PPMI cds=0.75,PPMI,recommended,2,cds=0.75 neg=1,simlex,0.2748,992,999,0.9000
+PPMI cds=0.75,PPMI,recommended,2,cds=0.75 neg=1,google_add_30k,0.3450,12268,19544,0.9000
+PPMI cds=0.75,PPMI,recommended,2,cds=0.75 neg=1,google_mul_30k,0.3373,12268,19544,0.9000
+PPMI cds=0.75,PPMI,recommended,2,cds=0.75 neg=1,google_add,0.2443,17827,19544,0.9000
+PPMI cds=0.75,PPMI,recommended,2,cds=0.75 neg=1,google_mul,0.0814,17827,19544,0.9000
+PPMI cds=0.75 neg=5,PPMI,variant,2,cds=0.75 neg=5,ws_sim,0.6377,202,203,1.1000
+PPMI cds=0.75 neg=5,PPMI,variant,2,cds=0.75 neg=5,ws_rel,0.5937,251,252,1.1000
+PPMI cds=0.75 neg=5,PPMI,variant,2,cds=0.75 neg=5,men,0.6055,2998,3000,1.1000
+PPMI cds=0.75 neg=5,PPMI,variant,2,cds=0.75 neg=5,mturk,0.5821,284,287,1.1000
+PPMI cds=0.75 neg=5,PPMI,variant,2,cds=0.75 neg=5,rare_words,0.2859,951,2034,1.1000
+PPMI cds=0.75 neg=5,PPMI,variant,2,cds=0.75 neg=5,simlex,0.2826,992,999,1.1000
+PPMI cds=0.75 neg=5,PPMI,variant,2,cds=0.75 neg=5,google_add_30k,0.2298,12268,19544,1.1000
+PPMI cds=0.75 neg=5,PPMI,variant,2,cds=0.75 neg=5,google_mul_30k,0.0695,12268,19544,1.1000
+PPMI cds=0.75 neg=5,PPMI,variant,2,cds=0.75 neg=5,google_add,0.1371,17827,19544,1.1000
+PPMI cds=0.75 neg=5,PPMI,variant,2,cds=0.75 neg=5,google_mul,0.0208,17827,19544,1.1000
+SVD cds=0.75 eig=0,SVD,variant,2,cds=0.75 eig=0.0 w_plus_c=False,ws_sim,0.6747,202,203,0.4000
+SVD cds=0.75 eig=0,SVD,variant,2,cds=0.75 eig=0.0 w_plus_c=False,ws_rel,0.6281,251,252,0.4000
+SVD cds=0.75 eig=0,SVD,variant,2,cds=0.75 eig=0.0 w_plus_c=False,men,0.6079,2998,3000,0.4000
+SVD cds=0.75 eig=0,SVD,variant,2,cds=0.75 eig=0.0 w_plus_c=False,mturk,0.5986,284,287,0.4000
+SVD cds=0.75 eig=0,SVD,variant,2,cds=0.75 eig=0.0 w_plus_c=False,rare_words,0.2839,951,2034,0.4000
+SVD cds=0.75 eig=0,SVD,variant,2,cds=0.75 eig=0.0 w_plus_c=False,simlex,0.2464,992,999,0.4000
+SVD cds=0.75 eig=0,SVD,variant,2,cds=0.75 eig=0.0 w_plus_c=False,google_add_30k,0.3172,12268,19544,0.4000
+SVD cds=0.75 eig=0,SVD,variant,2,cds=0.75 eig=0.0 w_plus_c=False,google_mul_30k,0.3350,12268,19544,0.4000
+SVD cds=0.75 eig=0,SVD,variant,2,cds=0.75 eig=0.0 w_plus_c=False,google_add,0.2396,17827,19544,0.4000
+SVD cds=0.75 eig=0,SVD,variant,2,cds=0.75 eig=0.0 w_plus_c=False,google_mul,0.2518,17827,19544,0.4000
+SVD cds=0.75 eig=0.5,SVD,recommended,2,cds=0.75 eig=0.5 w_plus_c=False,ws_sim,0.6752,202,203,0.4000
+SVD cds=0.75 eig=0.5,SVD,recommended,2,cds=0.75 eig=0.5 w_plus_c=False,ws_rel,0.6279,251,252,0.4000
+SVD cds=0.75 eig=0.5,SVD,recommended,2,cds=0.75 eig=0.5 w_plus_c=False,men,0.5993,2998,3000,0.4000
+SVD cds=0.75 eig=0.5,SVD,recommended,2,cds=0.75 eig=0.5 w_plus_c=False,mturk,0.6182,284,287,0.4000
+SVD cds=0.75 eig=0.5,SVD,recommended,2,cds=0.75 eig=0.5 w_plus_c=False,rare_words,0.2770,951,2034,0.4000
+SVD cds=0.75 eig=0.5,SVD,recommended,2,cds=0.75 eig=0.5 w_plus_c=False,simlex,0.2345,992,999,0.4000
+SVD cds=0.75 eig=0.5,SVD,recommended,2,cds=0.75 eig=0.5 w_plus_c=False,google_add_30k,0.3362,12268,19544,0.4000
+SVD cds=0.75 eig=0.5,SVD,recommended,2,cds=0.75 eig=0.5 w_plus_c=False,google_mul_30k,0.3596,12268,19544,0.4000
+SVD cds=0.75 eig=0.5,SVD,recommended,2,cds=0.75 eig=0.5 w_plus_c=False,google_add,0.2549,17827,19544,0.4000
+SVD cds=0.75 eig=0.5,SVD,recommended,2,cds=0.75 eig=0.5 w_plus_c=False,google_mul,0.2736,17827,19544,0.4000
+SVD cds=0.75 eig=0.5 w+c,SVD,variant,2,cds=0.75 eig=0.5 w_plus_c=True,ws_sim,0.6790,202,203,0.4000
+SVD cds=0.75 eig=0.5 w+c,SVD,variant,2,cds=0.75 eig=0.5 w_plus_c=True,ws_rel,0.6527,251,252,0.4000
+SVD cds=0.75 eig=0.5 w+c,SVD,variant,2,cds=0.75 eig=0.5 w_plus_c=True,men,0.6393,2998,3000,0.4000
+SVD cds=0.75 eig=0.5 w+c,SVD,variant,2,cds=0.75 eig=0.5 w_plus_c=True,mturk,0.6122,284,287,0.4000
+SVD cds=0.75 eig=0.5 w+c,SVD,variant,2,cds=0.75 eig=0.5 w_plus_c=True,rare_words,0.2990,951,2034,0.4000
+SVD cds=0.75 eig=0.5 w+c,SVD,variant,2,cds=0.75 eig=0.5 w_plus_c=True,simlex,0.2462,992,999,0.4000
+SVD cds=0.75 eig=0.5 w+c,SVD,variant,2,cds=0.75 eig=0.5 w_plus_c=True,google_add_30k,0.3333,12268,19544,0.4000
+SVD cds=0.75 eig=0.5 w+c,SVD,variant,2,cds=0.75 eig=0.5 w_plus_c=True,google_mul_30k,0.3482,12268,19544,0.4000
+SVD cds=0.75 eig=0.5 w+c,SVD,variant,2,cds=0.75 eig=0.5 w_plus_c=True,google_add,0.2633,17827,19544,0.4000
+SVD cds=0.75 eig=0.5 w+c,SVD,variant,2,cds=0.75 eig=0.5 w_plus_c=True,google_mul,0.2766,17827,19544,0.4000
+SVD cds=0.75 eig=1,SVD,variant,2,cds=0.75 eig=1.0 w_plus_c=False,ws_sim,0.6105,202,203,0.4000
+SVD cds=0.75 eig=1,SVD,variant,2,cds=0.75 eig=1.0 w_plus_c=False,ws_rel,0.5434,251,252,0.4000
+SVD cds=0.75 eig=1,SVD,variant,2,cds=0.75 eig=1.0 w_plus_c=False,men,0.5242,2998,3000,0.4000
+SVD cds=0.75 eig=1,SVD,variant,2,cds=0.75 eig=1.0 w_plus_c=False,mturk,0.5831,284,287,0.4000
+SVD cds=0.75 eig=1,SVD,variant,2,cds=0.75 eig=1.0 w_plus_c=False,rare_words,0.2016,951,2034,0.4000
+SVD cds=0.75 eig=1,SVD,variant,2,cds=0.75 eig=1.0 w_plus_c=False,simlex,0.2124,992,999,0.4000
+SVD cds=0.75 eig=1,SVD,variant,2,cds=0.75 eig=1.0 w_plus_c=False,google_add_30k,0.3409,12268,19544,0.4000
+SVD cds=0.75 eig=1,SVD,variant,2,cds=0.75 eig=1.0 w_plus_c=False,google_mul_30k,0.3624,12268,19544,0.4000
+SVD cds=0.75 eig=1,SVD,variant,2,cds=0.75 eig=1.0 w_plus_c=False,google_add,0.2607,17827,19544,0.4000
+SVD cds=0.75 eig=1,SVD,variant,2,cds=0.75 eig=1.0 w_plus_c=False,google_mul,0.2772,17827,19544,0.4000
+"SGNS vanilla (neg=1, cds=1)",SGNS,vanilla,2,negative=1 ns_exponent=1.0 w_plus_c=False,ws_sim,0.6384,202,203,0.4000
+"SGNS vanilla (neg=1, cds=1)",SGNS,vanilla,2,negative=1 ns_exponent=1.0 w_plus_c=False,ws_rel,0.5748,251,252,0.4000
+"SGNS vanilla (neg=1, cds=1)",SGNS,vanilla,2,negative=1 ns_exponent=1.0 w_plus_c=False,men,0.4777,2998,3000,0.4000
+"SGNS vanilla (neg=1, cds=1)",SGNS,vanilla,2,negative=1 ns_exponent=1.0 w_plus_c=False,mturk,0.5435,284,287,0.4000
+"SGNS vanilla (neg=1, cds=1)",SGNS,vanilla,2,negative=1 ns_exponent=1.0 w_plus_c=False,rare_words,0.3250,951,2034,0.4000
+"SGNS vanilla (neg=1, cds=1)",SGNS,vanilla,2,negative=1 ns_exponent=1.0 w_plus_c=False,simlex,0.2761,992,999,0.4000
+"SGNS vanilla (neg=1, cds=1)",SGNS,vanilla,2,negative=1 ns_exponent=1.0 w_plus_c=False,google_add_30k,0.2464,12268,19544,0.4000
+"SGNS vanilla (neg=1, cds=1)",SGNS,vanilla,2,negative=1 ns_exponent=1.0 w_plus_c=False,google_mul_30k,0.2327,12268,19544,0.4000
+"SGNS vanilla (neg=1, cds=1)",SGNS,vanilla,2,negative=1 ns_exponent=1.0 w_plus_c=False,google_add,0.1785,17827,19544,0.4000
+"SGNS vanilla (neg=1, cds=1)",SGNS,vanilla,2,negative=1 ns_exponent=1.0 w_plus_c=False,google_mul,0.1649,17827,19544,0.4000
+SGNS neg=5 cds=0.75,SGNS,variant,2,negative=5 ns_exponent=0.75 w_plus_c=False,ws_sim,0.6631,202,203,0.4000
+SGNS neg=5 cds=0.75,SGNS,variant,2,negative=5 ns_exponent=0.75 w_plus_c=False,ws_rel,0.5430,251,252,0.4000
+SGNS neg=5 cds=0.75,SGNS,variant,2,negative=5 ns_exponent=0.75 w_plus_c=False,men,0.4854,2998,3000,0.4000
+SGNS neg=5 cds=0.75,SGNS,variant,2,negative=5 ns_exponent=0.75 w_plus_c=False,mturk,0.4996,284,287,0.4000
+SGNS neg=5 cds=0.75,SGNS,variant,2,negative=5 ns_exponent=0.75 w_plus_c=False,rare_words,0.3734,951,2034,0.4000
+SGNS neg=5 cds=0.75,SGNS,variant,2,negative=5 ns_exponent=0.75 w_plus_c=False,simlex,0.3214,992,999,0.4000
+SGNS neg=5 cds=0.75,SGNS,variant,2,negative=5 ns_exponent=0.75 w_plus_c=False,google_add_30k,0.3090,12268,19544,0.4000
+SGNS neg=5 cds=0.75,SGNS,variant,2,negative=5 ns_exponent=0.75 w_plus_c=False,google_mul_30k,0.3112,12268,19544,0.4000
+SGNS neg=5 cds=0.75,SGNS,variant,2,negative=5 ns_exponent=0.75 w_plus_c=False,google_add,0.2217,17827,19544,0.4000
+SGNS neg=5 cds=0.75,SGNS,variant,2,negative=5 ns_exponent=0.75 w_plus_c=False,google_mul,0.2273,17827,19544,0.4000
+SGNS neg=15 cds=0.75,SGNS,recommended,2,negative=15 ns_exponent=0.75 w_plus_c=False,ws_sim,0.6907,202,203,0.4000
+SGNS neg=15 cds=0.75,SGNS,recommended,2,negative=15 ns_exponent=0.75 w_plus_c=False,ws_rel,0.5722,251,252,0.4000
+SGNS neg=15 cds=0.75,SGNS,recommended,2,negative=15 ns_exponent=0.75 w_plus_c=False,men,0.4914,2998,3000,0.4000
+SGNS neg=15 cds=0.75,SGNS,recommended,2,negative=15 ns_exponent=0.75 w_plus_c=False,mturk,0.5368,284,287,0.4000
+SGNS neg=15 cds=0.75,SGNS,recommended,2,negative=15 ns_exponent=0.75 w_plus_c=False,rare_words,0.3803,951,2034,0.4000
+SGNS neg=15 cds=0.75,SGNS,recommended,2,negative=15 ns_exponent=0.75 w_plus_c=False,simlex,0.3336,992,999,0.4000
+SGNS neg=15 cds=0.75,SGNS,recommended,2,negative=15 ns_exponent=0.75 w_plus_c=False,google_add_30k,0.3182,12268,19544,0.4000
+SGNS neg=15 cds=0.75,SGNS,recommended,2,negative=15 ns_exponent=0.75 w_plus_c=False,google_mul_30k,0.3217,12268,19544,0.4000
+SGNS neg=15 cds=0.75,SGNS,recommended,2,negative=15 ns_exponent=0.75 w_plus_c=False,google_add,0.2247,17827,19544,0.4000
+SGNS neg=15 cds=0.75,SGNS,recommended,2,negative=15 ns_exponent=0.75 w_plus_c=False,google_mul,0.2329,17827,19544,0.4000
+SGNS neg=15 cds=0.75 w+c,SGNS,variant,2,negative=15 ns_exponent=0.75 w_plus_c=True,ws_sim,0.7183,202,203,0.4000
+SGNS neg=15 cds=0.75 w+c,SGNS,variant,2,negative=15 ns_exponent=0.75 w_plus_c=True,ws_rel,0.6716,251,252,0.4000
+SGNS neg=15 cds=0.75 w+c,SGNS,variant,2,negative=15 ns_exponent=0.75 w_plus_c=True,men,0.6032,2998,3000,0.4000
+SGNS neg=15 cds=0.75 w+c,SGNS,variant,2,negative=15 ns_exponent=0.75 w_plus_c=True,mturk,0.6071,284,287,0.4000
+SGNS neg=15 cds=0.75 w+c,SGNS,variant,2,negative=15 ns_exponent=0.75 w_plus_c=True,rare_words,0.3465,951,2034,0.4000
+SGNS neg=15 cds=0.75 w+c,SGNS,variant,2,negative=15 ns_exponent=0.75 w_plus_c=True,simlex,0.3011,992,999,0.4000
+SGNS neg=15 cds=0.75 w+c,SGNS,variant,2,negative=15 ns_exponent=0.75 w_plus_c=True,google_add_30k,0.3868,12268,19544,0.4000
+SGNS neg=15 cds=0.75 w+c,SGNS,variant,2,negative=15 ns_exponent=0.75 w_plus_c=True,google_mul_30k,0.3638,12268,19544,0.4000
+SGNS neg=15 cds=0.75 w+c,SGNS,variant,2,negative=15 ns_exponent=0.75 w_plus_c=True,google_add,0.2855,17827,19544,0.4000
+SGNS neg=15 cds=0.75 w+c,SGNS,variant,2,negative=15 ns_exponent=0.75 w_plus_c=True,google_mul,0.2748,17827,19544,0.4000
