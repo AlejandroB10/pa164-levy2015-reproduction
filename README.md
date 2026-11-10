@@ -65,6 +65,7 @@ Cold timings: SVD 170 s (cds=1) and 129 s (cds=0.75); SGNS 111 s (neg=1), 218 s 
 | `sanity_check.py` | rebuilds an earlier prototype setting to validate the pipeline |
 | `compare_results.py` | compares a fresh run with the committed `results/results.csv` |
 | `download_data.sh` | downloads text8 and the evaluation sets into `./data` |
+| `recipes/`, `build_recipe_corpus.py`, `download_recipes.sh` | the course project: ingredient embeddings on Open Recipes, see [`recipes/README.md`](recipes/README.md) |
 
 The formulas were re-implemented from the paper; the original `hyperwords` code was only read
 as a reference (it is not executed and no code was copied).
