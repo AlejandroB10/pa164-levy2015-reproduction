@@ -77,6 +77,33 @@ dropping rare ingredients.
 One catch: the candidates are the model's own vocabulary, so the thresholds need to match. SGNS
 uses `min_count=5`, which leaves 4,337 ingredients. Say which threshold your model uses.
 
+## SGNS
+
+```bash
+python tune_sgns.py grid    # 240 configs on val -> results/recipes/sgns_val.csv (~1 h, resumable)
+python tune_sgns.py test    # gensim defaults vs val-best on test, 3 seeds, once
+```
+
+`recipes/sgns.py` trains gensim's skip-gram with the window set to the longest recipe and
+`shrink_windows=False`. The grid covers `negative` 1/5/15, `ns_exponent` (cds) 0.75/1.0,
+`sample` 0/1e-5/1e-4/1e-3, `vector_size` 100/300 and `epochs` 5 to 100, and each model gets
+scored twice, as W and as W+C. The script sets `PYTHONHASHSEED=0` and gives each config a
+single worker. gensim seeds its vectors from Python's string hash, and without a fixed seed two
+runs of the same config come out different. Embeddings are saved to
+`data/recipes/embeddings/sgns-{vanilla,tuned}.txt`.
+
+Test results, mean ± std over 3 seeds (every row is in `results/recipes/sgns_test.csv`):
+
+| Model | Config | MRR | Hit@1 | Hit@10 | Coverage |
+|---|---|---|---|---|---|
+| SGNS vanilla | gensim defaults: neg 5, cds 0.75, sub 1e-3, dim 100, 5 epochs | 0.058 ± 0.000 | 0.036 | 0.100 | 94.3 % |
+| SGNS tuned | val-best: neg 15, cds 0.75, sub 1e-3, dim 100, 100 epochs, W only | 0.101 ± 0.000 | 0.056 | 0.195 | 94.3 % |
+
+On val, the number of epochs made the biggest difference: going from 5 to 100 took MRR from
+0.067 to 0.105. `neg` came second (0.099 with 1, 0.105 with 15). 100 dimensions did better than
+300, and `cds` hardly mattered. The surprise was W+C. On text8 it helped, but here it was worse
+than W in every configuration, and its best run only reached 0.074.
+
 ## Rules for training and tuning
 
 1. Tune on the validation split (`val_comments_subs.pkl`) and report on test once. If you tune
