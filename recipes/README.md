@@ -42,11 +42,40 @@ only shows aggregate numbers for them.
 A canonical name is the first surface form of a GISMo cluster, so `garlic_cloves` becomes
 `garlic_clove`. To map any Recipe1MSubs word, use `load_vocabulary(...).surface[word]`.
 
-Where we are now: 97.7 % of the ingredient lines that name an ingredient get matched. Another
-28 % of all lines are broken scrapes that only kept the amount (`1 cup 1 cup`). 5,797 of the
+Where we are now: 97.7 % of the ingredient lines that name an ingredient get matched. Those
+lines leave out the broken scrapes that only kept the amount (`1 cup 1 cup`), which make up
+28 % of all lines. 5,797 of the
 6,633 ingredients show up at least once, and 90.4 % of the test pairs have both ingredients in
 10 or more recipes (76.4 % in 50 or more). A match isn't necessarily a correct match, though.
 We still have to check the parser by hand on about 200 lines.
+
+## Shared embedding format
+
+Save your vectors with `recipes.embeddings.save_embeddings(path, names, vectors)`. It writes
+plain word2vec text with one canonical ingredient per row, which `load_embeddings` or gensim's
+`KeyedVectors.load_word2vec_format` can read back. Then one evaluation script works for every
+model. It's fine to leave ingredients out: the evaluation counts them as not covered and reports
+the coverage.
+
+## Evaluation (same for every model)
+
+Call `recipes.evaluate.evaluate_substitutions(names, vectors, pairs)`, with `pairs` from
+`load_substitutions`. Use val while tuning and test once at the very end.
+
+Each row of the pickle is one user comment, and we count every one of them, duplicates
+included. That gives 10,729 instances in val (6,865 distinct pairs) and 10,747 in test (6,798).
+
+For each (target, substitute) pair we rank every ingredient that has a vector, apart from the
+target itself, by cosine similarity to the target. If the substitute ends up at rank `r`, the
+pair scores `1/r`, and Hit@k checks whether `r <= k`. A pair whose target or substitute has no
+vector scores 0, and so does one whose vector is all zeros or not finite. When two candidates
+are equally close, the tie counts against the model. Report `mrr` (over all pairs, this is the
+headline number), `hit@1/3/10`,
+`mrr_covered` (covered pairs only) and `coverage`. That way a model can't look better just by
+dropping rare ingredients.
+
+One catch: the candidates are the model's own vocabulary, so the thresholds need to match. SGNS
+uses `min_count=5`, which leaves 4,337 ingredients. Say which threshold your model uses.
 
 ## Rules for training and tuning
 
