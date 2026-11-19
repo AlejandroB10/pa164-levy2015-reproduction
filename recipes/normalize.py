@@ -2,8 +2,8 @@
 import re
 import unicodedata
 
-# Units and containers. They are dropped only right after a quantity, because some of them
-# ("clove", "stick", "jar") are also ingredients in the vocabulary.
+# Units and containers. We only drop them right after a quantity, because a few of them
+# ("clove", "stick", "jar") are ingredients in the vocabulary too.
 UNITS = {
     "c", "cup", "cups", "tsp", "tsps", "teaspoon", "teaspoons", "tbsp", "tbsps", "tbs", "tablespoon",
     "tablespoons", "oz", "ounce", "ounces", "lb", "lbs", "pound", "pounds", "g", "gram", "grams", "kg",
@@ -13,8 +13,8 @@ UNITS = {
     "heads", "sprig", "sprigs", "slice", "slices", "piece", "pieces", "pinch", "pinches", "dash",
     "dashes", "handful", "handfuls", "container", "containers", "envelope", "envelopes", "sheet", "sheets", "of", "weight", "fl", "fluid",
 }
-# Size and container words that are part of some ingredient names ("whole milk", "bay leaves"),
-# so they are never stripped; a line made only of them and amounts has no ingredient name.
+# Size and container words. Some ingredient names contain them ("whole milk", "bay leaves"),
+# so we never strip them. A line with nothing but these words and amounts names no ingredient.
 COUNT_WORDS = {
     "whole", "large", "medium", "small", "stalk", "stalks", "loaf", "loaves", "block", "blocks", "tub",
     "tubs", "cube", "cubes", "leaf", "leaves", "drop", "drops", "bulb", "bulbs", "carton", "cartons",
