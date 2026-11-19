@@ -33,3 +33,19 @@ def test_names_must_be_single_tokens(tmp_path, bad):
 def test_rows_must_match_names(tmp_path):
     with pytest.raises(ValueError):
         save_embeddings(tmp_path / "v.txt", ["a", "b"], np.zeros((1, 2), dtype=np.float32))
+
+
+def test_truncated_file_is_rejected(tmp_path):
+    # A file cut short must fail loudly instead of returning uninitialised rows.
+    path = tmp_path / "v.txt"
+    save_embeddings(path, ["a", "b", "c"], np.ones((3, 2), dtype=np.float32))
+    path.write_text("\n".join(path.read_text().splitlines()[:3]) + "\n")
+    with pytest.raises(ValueError, match="rows"):
+        load_embeddings(path)
+
+
+def test_row_with_wrong_width_is_rejected(tmp_path):
+    path = tmp_path / "v.txt"
+    path.write_text("2 2\na 1 2\nb 1\n")
+    with pytest.raises(ValueError, match="b"):
+        load_embeddings(path)

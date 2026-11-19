@@ -27,6 +27,11 @@ def load_embeddings(path):
         names, vectors = [], np.empty((rows, dims), dtype=np.float32)
         for i, line in enumerate(f):
             name, *values = line.rstrip("\n").split(" ")
+            if i >= rows or len(values) != dims:
+                raise ValueError(f"{path}: header says {rows} rows of {dims} values, "
+                                 f"line {i + 2} ({name!r}) does not fit")
             names.append(name)
             vectors[i] = np.array(values, dtype=np.float32)
+    if len(names) != rows:
+        raise ValueError(f"{path}: header says {rows} rows but the file has {len(names)}")
     return names, vectors

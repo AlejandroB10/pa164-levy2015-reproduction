@@ -51,3 +51,15 @@ def test_ties_count_against_the_model():
     vectors = np.array([[1.0, 0.0], [0.0, 1.0], [0.0, -1.0]])
     m = evaluate_substitutions(names, vectors, [("a", "b")])
     assert m["mrr"] == pytest.approx(1 / 2)
+
+
+def test_names_must_match_rows_and_be_unique():
+    with pytest.raises(ValueError):
+        evaluate_substitutions(["a", "b"], VECTORS, [("a", "b")])
+    with pytest.raises(ValueError):
+        evaluate_substitutions(["a", "b", "b", "d"], VECTORS, [("a", "b")])
+
+
+def test_no_pairs_is_an_error():
+    with pytest.raises(ValueError):
+        evaluate_substitutions(NAMES, VECTORS, [])

@@ -4,7 +4,8 @@ For each (target, substitute) pair we rank every ingredient that has a vector, e
 target, by cosine similarity to the target, and look at where the true substitute lands. That
 rank gives MRR and Hit@k. If the model has no vector for the target or the substitute, the pair
 scores 0, so a model cannot look better just by leaving out rare ingredients. An all-zero or
-non-finite row counts as no vector, and ties count against the model.
+non-finite row counts as no vector, ties count against the model, and a pair whose substitute
+is the target itself is not covered.
 """
 from collections import defaultdict
 
@@ -15,6 +16,8 @@ KS = (1, 3, 10)
 
 def substitute_ranks(names, matrix, pairs):
     """Rank of each pair's substitute (1 is best), or None if the pair is not covered."""
+    if len(names) != len(matrix) or len(set(names)) != len(names):
+        raise ValueError(f"need one unique name per row: {len(names)} names, {len(matrix)} rows")
     norms = np.linalg.norm(matrix, axis=1)
     # An all-zero or non-finite row carries no information, so it counts as no vector at all.
     usable = np.isfinite(matrix).all(axis=1) & (norms > 0)
@@ -37,6 +40,8 @@ def substitute_ranks(names, matrix, pairs):
 
 def evaluate_substitutions(names, matrix, pairs):
     """MRR and Hit@k over all pairs (uncovered ones count as 0), covered-only MRR, coverage."""
+    if not pairs:
+        raise ValueError("no pairs to evaluate")
     ranks = substitute_ranks(names, np.asarray(matrix, dtype=np.float64), pairs)
     covered = [r for r in ranks if r is not None]
     n = len(ranks)
