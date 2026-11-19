@@ -47,9 +47,12 @@ class Normalizer:
 
     @staticmethod
     def is_header(line):
-        """Blank lines and section titles ("For the gravy:", "SAUSAGE GRAVY")."""
+        """Blank lines and section titles ("For the gravy:", "SAUSAGE GRAVY").
+
+        isnumeric, not isdigit, so that an amount like "½" still marks an ingredient line.
+        """
         text = line.strip()
-        return not text or text.endswith(":") or (text.isupper() and not any(ch.isdigit() for ch in text))
+        return not text or text.endswith(":") or (text.isupper() and not any(ch.isnumeric() for ch in text))
 
     def is_quantity_only(self, line):
         """A line with no ingredient name at all ("1 cup 1 cup", a broken scrape)."""

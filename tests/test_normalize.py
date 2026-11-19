@@ -74,6 +74,13 @@ def test_section_headers_are_skipped(norm):
     assert norm.normalize("For the gravy:") is None
 
 
+def test_all_caps_line_with_a_fraction_is_an_ingredient_not_a_header(norm):
+    # "½" is not a digit for str.isdigit, so this line used to be taken for a section title.
+    assert not norm.is_header("½ CUP BUTTER")
+    assert norm.normalize("½ CUP BUTTER") == "butter"
+    assert norm.normalize("¼ CUP OLIVE OIL") == "olive_oil"
+
+
 def test_ingredient_word_after_comma_is_used_when_head_has_none(norm):
     assert norm.normalize("1 cup shredded, cheese") == "cheese"
 
