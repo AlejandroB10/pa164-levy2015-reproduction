@@ -101,8 +101,9 @@ Test results, mean ± std over 3 seeds (every row is in `results/recipes/sgns_te
 
 On val, the number of epochs made the biggest difference: going from 5 to 100 took MRR from
 0.067 to 0.105. `neg` came second (0.099 with 1, 0.105 with 15). 100 dimensions did better than
-300, and `cds` hardly mattered. The surprise was W+C. On text8 it helped, but here it was worse
-than W in every configuration, and its best run only reached 0.074.
+300, and `cds` hardly mattered. The surprise was W+C. On text8 it helped, but here it only beat
+W in 43 of the 240 configurations, nearly all of them weak ones (5 epochs, or `sample` 1e-5), and
+its best run reached 0.074 against 0.105 for W.
 
 ## Rules for training and tuning
 

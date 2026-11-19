@@ -16,12 +16,6 @@ import sys
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
-# gensim seeds each word vector from Python's string hash, which changes per process.
-# Without a fixed seed two runs of the same config give different vectors.
-if os.environ.get("PYTHONHASHSEED") != "0":
-    os.environ["PYTHONHASHSEED"] = "0"
-    os.execv(sys.executable, [sys.executable] + sys.argv)
-
 import numpy as np  # noqa: E402
 
 from recipes.embeddings import save_embeddings  # noqa: E402
@@ -82,10 +76,44 @@ def config_key(row):
     return tuple(float(row[k]) for k in KNOBS)
 
 
+def keep_complete_configs(path):
+    """Drop what a killed run left half-written, and return the configs that are done.
+
+    A config is done when both its W and its W+C rows are complete. Anything else (a cut last
+    line, a config with only one row) is removed from the file so the grid can append to it.
+    """
+    if not path.exists():
+        return set()
+    with open(path, newline="") as f:
+        reader = csv.DictReader(f)
+        fields = reader.fieldnames
+        rows = [r for r in reader if None not in r.values() and all(r[k] != "" for k in fields)]
+    kinds = {}
+    for r in rows:
+        kinds.setdefault(config_key(r), set()).add(r["w+c"])
+    done = {key for key, seen in kinds.items() if seen == {"False", "True"}}
+    keep = [r for r in rows if config_key(r) in done]
+    with open(path, newline="") as f:
+        unchanged = f.read() == _csv_text(fields, keep)
+    if not unchanged:
+        with open(path, "w", newline="") as f:
+            f.write(_csv_text(fields, keep))
+    return done
+
+
+def _csv_text(fields, rows):
+    import io
+    out = io.StringIO()
+    writer = csv.DictWriter(out, fields, lineterminator="\r\n")
+    writer.writeheader()
+    writer.writerows(rows)
+    return out.getvalue()
+
+
 def grid(pilot, jobs):
     RESULTS.mkdir(parents=True, exist_ok=True)
     out = RESULTS / ("sgns_val_pilot.csv" if pilot else "sgns_val.csv")
-    done = {config_key(r) for r in read_csv(out)}
+    done = keep_complete_configs(out)
     space = PILOT if pilot else GRID
     todo = [dict(zip(KNOBS, values)) for values in itertools.product(*(space[k] for k in KNOBS))]
     todo = [c for c in todo if config_key(c) not in done]
@@ -145,6 +173,11 @@ def test(force):
 
 
 def main():
+    # gensim seeds each word vector from Python's string hash, which changes per process.
+    # Without a fixed seed two runs of the same config give different vectors.
+    if os.environ.get("PYTHONHASHSEED") != "0":
+        os.environ["PYTHONHASHSEED"] = "0"
+        os.execv(sys.executable, [sys.executable] + sys.argv)
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = parser.add_subparsers(dest="cmd", required=True)
     g = sub.add_parser("grid", help="train every config on val")
