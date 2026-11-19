@@ -10,6 +10,7 @@ the grid because of what test said.
 """
 import argparse
 import csv
+import io
 import itertools
 import os
 import sys
@@ -79,30 +80,34 @@ def config_key(row):
 def keep_complete_configs(path):
     """Drop what a killed run left half-written, and return the configs that are done.
 
-    A config is done when both its W and its W+C rows are complete. Anything else (a cut last
-    line, a config with only one row) is removed from the file so the grid can append to it.
+    A config is done when both its W and its W+C rows are complete. A last line without its
+    newline was cut mid-write, so it goes, and so does a config with only one of its two rows.
+    The cleaned file replaces the old one in a single rename, so an interrupt here loses nothing.
     """
     if not path.exists():
         return set()
-    with open(path, newline="") as f:
-        reader = csv.DictReader(f)
-        fields = reader.fieldnames
-        rows = [r for r in reader if None not in r.values() and all(r[k] != "" for k in fields)]
+    text = path.read_text()
+    if not text.endswith("\n"):
+        text = text[: text.rfind("\n") + 1]
+    reader = csv.DictReader(io.StringIO(text, newline=""))
+    fields = reader.fieldnames
+    if not fields:
+        path.unlink()
+        return set()
+    rows = [r for r in reader if None not in r.values() and all(r[k] != "" for k in fields)]
     kinds = {}
     for r in rows:
         kinds.setdefault(config_key(r), set()).add(r["w+c"])
     done = {key for key, seen in kinds.items() if seen == {"False", "True"}}
-    keep = [r for r in rows if config_key(r) in done]
-    with open(path, newline="") as f:
-        unchanged = f.read() == _csv_text(fields, keep)
-    if not unchanged:
-        with open(path, "w", newline="") as f:
-            f.write(_csv_text(fields, keep))
+    clean = _csv_text(fields, [r for r in rows if config_key(r) in done])
+    if clean != path.read_text():
+        tmp = path.with_name(path.name + ".tmp")
+        tmp.write_text(clean, newline="")
+        os.replace(tmp, path)
     return done
 
 
 def _csv_text(fields, rows):
-    import io
     out = io.StringIO()
     writer = csv.DictWriter(out, fields, lineterminator="\r\n")
     writer.writeheader()

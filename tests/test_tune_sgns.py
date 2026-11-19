@@ -37,3 +37,20 @@ def test_complete_file_is_left_as_it_is(tmp_path):
     before = path.read_text()
     assert tune_sgns.keep_complete_configs(path) == {tune_sgns.config_key(A)}
     assert path.read_text() == before
+
+
+def test_last_line_cut_inside_its_last_value_is_dropped(tmp_path):
+    # Every column is there but "n" was cut from 3 digits to 1 and the newline never came.
+    path = tmp_path / "sgns_val.csv"
+    write(path, [row(A, False), row(A, True), row(B, False)])
+    cut = ",".join(row(B, True)[k] for k in FIELDS)[:-1] + "1"
+    with open(path, "a", newline="") as f:
+        f.write(cut)
+    assert tune_sgns.keep_complete_configs(path) == {tune_sgns.config_key(A)}
+
+
+def test_empty_results_file_starts_over(tmp_path):
+    path = tmp_path / "sgns_val.csv"
+    path.write_text("")
+    assert tune_sgns.keep_complete_configs(path) == set()
+    assert not path.exists()  # the grid then writes a fresh header
