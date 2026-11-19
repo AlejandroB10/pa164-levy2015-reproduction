@@ -34,9 +34,9 @@ def test_resume_keeps_only_configs_with_both_rows_and_drops_a_cut_row(tmp_path):
 def test_complete_file_is_left_as_it_is(tmp_path):
     path = tmp_path / "sgns_val.csv"
     write(path, [row(A, False), row(A, True)])
-    before = path.read_text()
+    before = (path.read_bytes(), path.stat().st_mtime_ns)
     assert tune_sgns.keep_complete_configs(path) == {tune_sgns.config_key(A)}
-    assert path.read_text() == before
+    assert (path.read_bytes(), path.stat().st_mtime_ns) == before  # not even rewritten
 
 
 def test_last_line_cut_inside_its_last_value_is_dropped(tmp_path):

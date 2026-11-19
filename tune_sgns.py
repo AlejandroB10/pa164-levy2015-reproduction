@@ -86,7 +86,9 @@ def keep_complete_configs(path):
     """
     if not path.exists():
         return set()
-    text = path.read_text()
+    with open(path, newline="") as f:  # keep the CSV's own \r\n line endings
+        original = f.read()
+    text = original
     if not text.endswith("\n"):
         text = text[: text.rfind("\n") + 1]
     reader = csv.DictReader(io.StringIO(text, newline=""))
@@ -100,9 +102,10 @@ def keep_complete_configs(path):
         kinds.setdefault(config_key(r), set()).add(r["w+c"])
     done = {key for key, seen in kinds.items() if seen == {"False", "True"}}
     clean = _csv_text(fields, [r for r in rows if config_key(r) in done])
-    if clean != path.read_text():
+    if clean != original:
         tmp = path.with_name(path.name + ".tmp")
-        tmp.write_text(clean, newline="")
+        with open(tmp, "w", newline="") as f:
+            f.write(clean)
         os.replace(tmp, path)
     return done
 
