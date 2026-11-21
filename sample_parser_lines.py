@@ -35,7 +35,11 @@ def draw(data_dir, size):
 
 def score(path):
     with open(path, encoding="utf-8", newline="") as f:
-        rows = [r for r in csv.DictReader(f, delimiter="\t") if r["correct"] in ("y", "n")]
+        all_rows = list(csv.DictReader(f, delimiter="\t"))
+    bad = sorted({r["correct"] for r in all_rows} - {"y", "n", ""})
+    if bad:
+        raise SystemExit(f"{path}: `correct` must be y, n or empty, found {bad}")
+    rows = [r for r in all_rows if r["correct"]]
     if not rows:
         raise SystemExit(f"{path}: no labelled rows yet")
     right = sum(r["correct"] == "y" for r in rows)
