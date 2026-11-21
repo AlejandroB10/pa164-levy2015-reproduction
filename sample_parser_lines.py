@@ -35,7 +35,8 @@ def draw(data_dir, size):
 
 def score(path):
     with open(path, encoding="utf-8", newline="") as f:
-        all_rows = list(csv.DictReader(f, delimiter="\t"))
+        # A row whose trailing tabs were stripped reads its missing fields as None.
+        all_rows = [{k: v or "" for k, v in r.items()} for r in csv.DictReader(f, delimiter="\t")]
     bad = sorted({r["correct"] for r in all_rows} - {"y", "n", ""})
     if bad:
         raise SystemExit(f"{path}: `correct` must be y, n or empty, found {bad}")
