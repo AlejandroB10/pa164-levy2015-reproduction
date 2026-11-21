@@ -1,7 +1,7 @@
 """Recipe1MSubs (GISMo) ingredient vocabulary and substitution pairs.
 
-The GISMo files are pickles. Unpickling can run arbitrary code, so they are read with an
-unpickler that only rebuilds plain containers and the one class the vocabulary needs.
+The GISMo files are pickles, and unpickling a file can run arbitrary code. We read them with
+an unpickler that refuses every class except GISMo's Vocabulary.
 """
 import pickle
 from dataclasses import dataclass
