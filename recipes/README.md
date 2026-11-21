@@ -46,8 +46,11 @@ Where we are now: 97.7 % of the ingredient lines that name an ingredient get mat
 lines leave out the broken scrapes that only kept the amount (`1 cup 1 cup`), which make up
 28 % of all lines. 5,797 of the
 6,633 ingredients show up at least once, and 90.4 % of the test pairs have both ingredients in
-10 or more recipes (76.4 % in 50 or more). A match isn't necessarily a correct match, though.
-We still have to check the parser by hand on about 200 lines.
+10 or more recipes (76.4 % in 50 or more). A match isn't necessarily a correct match, though,
+so we checked 200 random lines by hand (`sample_parser_lines.py`, labels in
+`results/recipes/parser_sample.tsv`): 94.0 % are right, and 96.4 % of the lines that got a match
+got the right one. Most misses are short forms and variants the GISMo vocabulary lacks (`AP
+flour`, bare `Parmesan`, `soured cream`, `low-salt chicken broth`).
 
 ## Shared embedding format
 

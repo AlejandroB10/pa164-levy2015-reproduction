@@ -1,0 +1,201 @@
+line	parsed	correct	expected	notes
+For my birthday, six weeks before Jordana’s, I received a copy of Rose Levy Beranbaum’s new cookbook,	rose	n		blog prose, not an ingredient line; 'rose' comes from a name
+1 cup heavy whipping cream	heavy_whipping_cream	y		
+1 clove garlic, pressed	garlic	y		
+6 tbsp olive oil	olive_oil	y		
+2 cups Chicken Broth	chicken_broth	y		
+Few shakes of good-quality white wine vinegar	white_wine_vinegar	y		
+200g small prawns cooked and peeled, (from a sustainable source)	prawn	y		
+100g unsalted butter, melted	unsalted_butter	y		
+½ cups Good Balsamic Vinegar	balsamic_vinegar	y		
+1 cup full-bodied red wine	full_bodied_red_wine	y		
+100g/3½oz icing sugar	icing_sugar	y		
+3/4 cup sliced almonds	sliced_almond	y		
+4 medium free-range eggs	free_range_egg	y		
+1 pound prepared fresh cheese ravioli	cheese_ravioli	y		
+3 tablespoons milk	milk	y		
+60g Peanuts roughly chopped	peanut	y		
+4 cloves Garlic, Minced	garlic	y		
+1 tbsp salt	salt	y		
+1 tbsp dry sherry or sake	dry_sherry	y		
+1 kg white bread flour or Tipo '00' flour, or 800g strong white bread flour or Tipo '00' flour, plus 200g finely ground semolina flour	white_bread_flour	y		
+¼ cups Toasted Pine Nuts	pine_nut	y		
+2 cups chicken stock or reduced-sodium chicken broth	low_sodium_chicken_broth	y		two alternatives; the second one counts
+1/4 teaspoon salt	salt	y		
+1/2 teaspoon  kosher salt	kosher_salt	y		
+2 tablespoons lemon juice	lemon_juice	y		
+chapatis, rotis or naan bread , to serve	naan_bread	y		alternatives; naan bread counts
+1 lime, juiced	lime	y		
+3 teaspoons rice vinegar	rice_vinegar	y		
+3 cups shredded or finely-chopped cooked chicken	cooked_chicken	y		
+1 large sweet potato , cut into chips	sweet_potato	y		
+3 juniper berries	juniper_berry	y		
+1/2 fluid ounce butterscotch schnapps	butterscotch_schnapps	y		
+2 large tomatoes, finely chopped	tomato	y		
+1 medium dried bay leaf, crushed	dried_bay_leaf	y		
+3/4 cup chopped walnuts	walnut	y		
+1 medium celery stalk, small dice	celery	y		
+2 cloves Garlic, Pressed	garlic	y		
+1 tablespoon cider vinegar	cider_vinegar	y		
+6 tomato slices	tomato	y		
+1/2 cup light corn syrup	light_corn_syrup	y		
+2 eggs	egg	y		
+1 lb. butternut squash, halved, seeded, peeled and cut into cubes	butternut_squash	y		
+6 jumbo eggs	jumbo_egg	y		
+4 bars 4 bars		y		no ingredient name; empty output is right
+1 cup Creamy Peanut Butter	creamy_peanut_butter	y		
+25g cornflour	cornflour	y		
+2 pounds tomatoes, sliced	tomato	y		
+1/2 cup chutney	chutney	y		
+3 cups diced carrots	carrot	y		
+pinch of salt	salt	y		
+1 Tbs. sugar	sugar	y		
+1 3/4 tsp. baking powder	baking_powder	y		
+1 tablespoon brandy  (optional)	brandy	y		
+4 sprigs thyme	thyme	y		
+6 oz. bittersweet chocolate, finely chopped	bittersweet_chocolate	y		
+1  Large Egg	egg	y		
+1/2 cup milk	milk	y		
+1/2 cup shortening	shortening	y		
+1 cup nonfat cottage cheese	nonfat_cottage_cheese	y		
+Salt and freshly ground pepper, to taste	ground_black_pepper	n	salt_and_pepper	the vocabulary has salt_and_pepper; only the pepper was taken
+1 (5.8 ounce) package crisp taco shells	taco_shell	y		
+2 tablespoons vegetable oil	vegetable_oil	y		
+1/2 cup salted sunflower kernels		n	sunflower_seed	'sunflower kernels' not recognised
+1/2 cup chopped red onion	red_onion	y		
+2 tablespoons water	water	y		
+1/2 teaspoon ground cinnamon	ground_cinnamon	y		
+1 cup shredded American cheese	american_cheese	y		
+2 cups milk, divided	milk	y		
+3/4 cup shredded mozzarella cheese	mozzarella_cheese	y		
+2 teaspoons Spicee Gourmet's St. Louis Rib Rub	rib	n		brand-name spice rub, not in the vocabulary; 'rib' is wrong
+1 grated fresh ginger	fresh_ginger	y		
+10 tablespoons butter, melted	butter	y		
+1/4 cup chopped fresh basil	fresh_basil	y		
+1/4 cup water	water	y		
+good pinch salt	salt	y		
+1/2 bunch cilantro leaves	cilantro_leaf	y		
+1 (15 ounce) can white kidney beans (cannellini), rinsed and drained	white_kidney_bean	y		
+100g butter, softened	butter	y		
+handful parsley leaves, finely chopped	parsley	y		
+1 vanilla pod	vanilla_pod	y		
+balsamic vinegar	balsamic_vinegar	y		
+1/2 cup milk	milk	y		
+1 teaspoon garlic powder	garlic_powder	y		
+125ml rapeseed oil , plus a little extra for greasing	rapeseed_oil	y		
+6 ounces bittersweet chocolate, chopped fine, or 6 ounces (1 cup) of the best chocolate chips	bittersweet_chocolate	y		
+1 tablespoon water	water	y		
+1/2 cup all-purpose flour	all_purpose_flour	y		
+1/2 pound (2 sticks) unsalted butter, softened	unsalted_butter	y		
+1 1/3 cups sugar	sugar	y		
+3 tablespoons all-purpose flour	all_purpose_flour	y		
+4 cups white sugar	white_sugar	y		
+2 cups low-salt chicken broth	chicken_broth	n	low_sodium_chicken_broth	'low-salt' is the low-sodium variant
+300g/10oz natural yoghurt	natural_yoghurt	y		
+5 Tbs. boiling water	boiling_water	y		
+1 garlic paste	garlic_paste	y		
+2 garlic cloves	garlic_clove	y		
+1/3 cup chopped fresh mint	mint	y		
+3/4 cup sour cream	sour_cream	y		
+6 tablespoons (3/4 stick) chilled unsalted butter, cut into 1/2-inch cubes	unsalted_butter	y		
+pinch dried chilli	dried_chilies	y		
+1/2 cup heavy cream	heavy_cream	y		
+1 teaspoon Diced Onion	diced_onion	y		
+1 (15 ounce) can tomato sauce	tomato_sauce	y		
+½ lemon	lemon	y		
+30g/1oz butter	butter	y		
+8 slices sweet batard or rustic country-style bread, cut on the bias, each about 1/4 inch thick and 6 inches wide	bread	y		
+1 cup sliced strawberries	strawberry	y		
+175ml maple syrup	maple_syrup	y		
+1 teaspoon (or more) kosher salt	kosher_salt	y		
+1 medium onion, diced	onion	y		
+1 teaspoon baking soda	baking_soda	y		
+4 cups frozen lima beans	frozen_lima_bean	y		
+750ml/1¼ pint coconut cream	cream_of_coconut	y		coconut cream and cream of coconut share one GISMo cluster
+2 tbsp grated Parmesan		n	parmesan_cheese	bare 'Parmesan' not in the surface forms
+2 whole Yellow Onions	yellow_onion	y		
+3/4 cup instant coffee granules	instant_coffee_crystal	y		
+500g pack lean minced beef	minced_beef	y		
+2 eggs	egg	y		
+1 tablespoon white wine	white_wine	y		
+2 cups Bisquick	bisquick	y		
+1 teaspoon Cornstarch	cornstarch	y		
+1 cinnamon stick	cinnamon_stick	y		
+8 flour tortillas	flour_tortilla	y		
+1/4 tsp. cayenne pepper	cayenne_pepper	y		
+1/8 teaspoon crushed red pepper flakes	crushed_red_pepper_flake	y		
+Sour Cream, For Serving	sour_cream	y		
+1 cup AP flour	flour	n	all_purpose_flour	'AP' abbreviation not expanded
+1/3 cup vegetable oil	vegetable_oil	y		
+2 tsp cornflour	cornflour	y		
+1 1/2 teaspoons red pepper flakes	red_pepper_flake	y		
+1 (8 ounce) package cannelloni pasta	pasta	y		
+1/2 cup small-dice, fully cooked ham (about 2 ounces)	cooked_ham	y		
+1 teaspoon Dried Basil	dried_basil	y		
+1 large onion, cut into 1/2-inch dice	onion	y		
+2 tbsp marsala	marsala	y		
+1 stick Butter, Sliced Into Pats	butter	y		
+4 lamb steaks	lamb_steak	y		
+3 (250 g) packages PHILADELPHIA Brick Cream Cheese, softened	cream_cheese	y		
+5 Tablespoons Crushed Pineapple	crushed_pineapple	y		
+1/4 (8 ounce) package angel hair pasta	angel_hair_pasta	y		
+1/2 teaspoon kosher salt	kosher_salt	y		
+1 chicken breast	chicken_breast	y		
+3/4 cup any flavor fruit jam	fruit_jam	y		
+6 leaves fresh basil, thinly sliced	fresh_basil	y		
+1 onion, sliced	onion	y		
+1 tsp of brown sugar	brown_sugar	y		
+1 cup organic unsweetened cocoa powder	unsweetened_cocoa_powder	y		
+Pinch of cayenne pepper	cayenne_pepper	y		
+1/4 teaspoon baking soda	baking_soda	y		
+1 tsp Dijon mustard	dijon_mustard	y		
+1/2 cup shortening	shortening	y		
+1/3 cup butter	butter	y		
+2 tablespoons red wine vinegar	red_wine_vinegar	y		
+1-¼ cup All-purpose Flour	all_purpose_flour	y		
+2 cups Seltzer Water	seltzer_water	y		
+1 pound ground beef	ground_beef	y		
+1 teaspoon vanilla extract	vanilla_extract	y		
+a little sifted icing sugar and crème fraîche, to serve, optional	creme_fraiche	y		two ingredients; either counts
+2 Tablespoons Coriander	coriander	y		
+1/4 cup sliced green olives	green_olive	y		
+1 pound ground beef	ground_beef	y		
+1 cup heavy cream	heavy_cream	y		
+5 cashew nuts, chopped	cashew_nut	y		
+2 teaspoons vanilla extract	vanilla_extract	y		
+100g fresh white breadcrumbs	fresh_white_breadcrumb	y		
+1 egg	egg	y		
+2 teaspoons chopped fresh cilantro, or to taste	fresh_cilantro	y		
+2.5 g white soy		n	soy_sauce	'white soy' (shiro shoyu) is a soy sauce
+1 1/4 cups hot water	water	y		
+1 cup arborio rice, cooked al dente ahead of time	arborio_rice	y		
+1 1/2 cups medium dice cooked turkey (about 6 ounces)	cooked_turkey	y		
+1 cup packed brown sugar	brown_sugar	y		
+500 g Greek style yoghurt	yoghurt	n	greek_yogurt	'Greek style yoghurt' lost the Greek
+2 teaspoons poppy seeds	poppy_seed	y		
+6 Tablespoons Water	water	y		
+12 plum tomatoes	plum_tomato	y		
+1 1/2 cups packed fresh Italian parsley leaves	fresh_italian_parsley	y		
+2 free-range eggs	free_range_egg	y		
+1 tablespoon fennel seed	fennel_seed	y		
+4 tablespoons butter	butter	y		
+3 Tomatos finely diced		n	tomato	misspelling 'Tomatos'
+1/8 teaspoon garlic salt	garlic_salt	y		
+1/2 teaspoon ground black pepper	ground_black_pepper	y		
+½ cups Tahini	tahini	y		
+½ large yam	yam	y		
+1 tablespoon all-purpose flour	all_purpose_flour	y		
+3/4 tsp ground turmeric	ground_turmeric	y		
+1 teaspoon Sriracha		n	sriracha_sauce	bare 'Sriracha' not in the surface forms
+1 teaspoon Smoked Paprika	smoked_paprika	y		
+250g/9oz cold butter	butter	y		
+1 1/4 cups heavy cream	heavy_cream	y		
+soured cream	cream	n	sour_cream	British 'soured cream' read as plain cream
+1 cup whipped cream	whipped_cream	y		
+4 Tablespoons Salt	salt	y		
+1/4 tablespoon dried basil	dried_basil	y		
+2½ tbsp sunflower oil	sunflower_oil	y		
+½ cups Whipping Cream	whipping_cream	y		
+1 cup flaked coconut	flaked_coconut	y		
+3 ounces (85 grams) unsweetened chocolate, roughly chopped	unsweetened_chocolate	y		
+¼ medium onion	onion	y		
