@@ -3,7 +3,8 @@
 #   - Open Recipes snapshot 2017-01-07 (173,278 recipes, CC BY 3.0): the training corpus.
 #   - Recipe1MSubs (GISMo, CC-BY-NC): ingredient vocabulary and substitution pairs.
 #     Evaluation only: never train on it.
-# The Open Recipes bucket now answers 403. If the download fails, pass a local copy:
+# The original Open Recipes bucket answers 403, so the snapshot comes from this repository's
+# GitHub release. To use a local copy instead:
 #   OPENRECIPES_GZ=/path/to/20170107-061401-recipeitems.json.gz ./download_recipes.sh
 set -euo pipefail
 
@@ -35,10 +36,11 @@ fetch() {  # fetch <file> <sha256> <command...>; the command writes to the path 
 OR_FILE="$DATA/openrecipes/20170107-061401-recipeitems.json.gz"
 OR_SHA="6e40a82e0bd83468f8020b461924d9d6cf8bdba822642c5276868104acb6d682"
 or_copy() { cp "$OPENRECIPES_GZ" "$1"; }
-or_curl() { curl -fL -o "$1" https://s3.amazonaws.com/openrecipes/20170107-061401-recipeitems.json.gz; }
+OR_URL=https://github.com/AlejandroB10/pa164-levy2015-reproduction/releases/download/openrecipes-2017-01-07/20170107-061401-recipeitems.json.gz
+or_curl() { curl -fL -o "$1" "$OR_URL"; }
 if [ -n "${OPENRECIPES_GZ:-}" ]; then OR_GET=or_copy; else OR_GET=or_curl; fi
 if ! fetch "$OR_FILE" "$OR_SHA" "$OR_GET"; then
-  echo "Open Recipes download failed. Ask the team for the file and set OPENRECIPES_GZ=<path>." >&2
+  echo "Open Recipes download failed. Fetch $OR_URL by hand and set OPENRECIPES_GZ=<path>." >&2
   exit 1
 fi
 

@@ -14,14 +14,17 @@ ingredients that could replace it.
 ## Data and licences
 
 ```bash
-OPENRECIPES_GZ=/path/to/20170107-061401-recipeitems.json.gz ./download_recipes.sh
+./download_recipes.sh                             # Open Recipes + Recipe1MSubs, checksummed
 python build_recipe_corpus.py --data-dir data     # ~10 s
 python -m pytest tests/
 ```
 
 Open Recipes is the training corpus: the 2017-01-07 snapshot, 173,278 recipes, CC BY 3.0
-(credit Fictive Kin in the report). The original bucket returns 403 these days, so the script
-takes a local copy through `OPENRECIPES_GZ` and checks its sha256. Ask Alejandro for the file.
+(credit Fictive Kin in the report). The original bucket returns 403 these days, so we put the
+same file up as an asset of the
+[`openrecipes-2017-01-07`](https://github.com/AlejandroB10/pa164-levy2015-reproduction/releases/tag/openrecipes-2017-01-07)
+release, and the script downloads it from there and checks its sha256. If you already have a
+copy, pass it with `OPENRECIPES_GZ=/path/to/file`.
 
 Recipe1MSubs (GISMo, by Fair, CC-BY-NC) gives us the ingredient vocabulary and the substitution
 pairs. We only evaluate on it and never train on it. Its files are pickles, so load them through
