@@ -1,0 +1,121 @@
+model,template,pooling,layers,mrr,hit@1,hit@3,hit@10,n
+BAAI/bge-base-en-v1.5,{},cls,L1,2.38,0.89,2.35,5.13,10729
+BAAI/bge-base-en-v1.5,{},cls,L2,3.89,1.44,4.02,8.5,10729
+BAAI/bge-base-en-v1.5,{},cls,L4,2.68,0.63,2.34,6.67,10729
+BAAI/bge-base-en-v1.5,{},cls,L6,3.1,1.07,3.11,6.75,10729
+BAAI/bge-base-en-v1.5,{},cls,L8,3.48,1.23,3.14,7.52,10729
+BAAI/bge-base-en-v1.5,{},cls,L10,3.6,1.55,3.39,7.8,10729
+BAAI/bge-base-en-v1.5,{},cls,L12,3.7,0.73,2.74,8.61,10729
+BAAI/bge-base-en-v1.5,{},cls,last4,4.3,1.35,3.17,10.49,10729
+BAAI/bge-base-en-v1.5,{},cls,all,4.15,1.24,3.69,9.32,10729
+BAAI/bge-base-en-v1.5,{},cls,emb+L1,2.23,0.86,1.88,4.99,10729
+BAAI/bge-base-en-v1.5,{},mean,L1,3.14,0.69,2.65,7.87,10729
+BAAI/bge-base-en-v1.5,{},mean,L2,3.06,0.7,2.46,7.85,10729
+BAAI/bge-base-en-v1.5,{},mean,L4,3.18,0.86,2.65,7.68,10729
+BAAI/bge-base-en-v1.5,{},mean,L6,3.11,0.73,2.53,7.17,10729
+BAAI/bge-base-en-v1.5,{},mean,L8,3.19,0.74,2.54,7.77,10729
+BAAI/bge-base-en-v1.5,{},mean,L10,3.22,0.75,2.36,8.38,10729
+BAAI/bge-base-en-v1.5,{},mean,L12,3.38,0.75,2.34,7.73,10729
+BAAI/bge-base-en-v1.5,{},mean,last4,3.15,0.7,2.27,7.62,10729
+BAAI/bge-base-en-v1.5,{},mean,all,3.07,0.72,2.53,6.98,10729
+BAAI/bge-base-en-v1.5,{},mean,emb+L1,3.07,0.46,2.52,7.69,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),cls,L1,2.35,0.89,2.29,5.18,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),cls,L2,3.92,1.51,4.03,8.74,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),cls,L4,3.15,0.85,3.13,7.67,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),cls,L6,3.13,1.22,2.66,6.77,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),cls,L8,3.84,1.54,3.22,8.87,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),cls,L10,3.7,1.42,3.2,8.17,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),cls,L12,3.75,0.5,2.73,9.82,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),cls,last4,4.01,0.75,2.96,9.96,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),cls,all,4.39,1.13,3.57,10.54,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),cls,emb+L1,2.3,0.96,1.99,4.52,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),mean,L1,3.09,0.58,2.64,7.88,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),mean,L2,3.09,0.62,2.67,7.83,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),mean,L4,3.14,0.73,2.6,7.46,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),mean,L6,3.1,0.68,2.66,7.45,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),mean,L8,3.09,0.71,2.37,8.15,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),mean,L10,3.17,0.75,2.21,7.91,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),mean,L12,3.25,0.57,1.88,7.58,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),mean,last4,3.07,0.72,1.92,7.47,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),mean,all,3.0,0.57,2.43,7.42,10729
+BAAI/bge-base-en-v1.5,{} (an ingredient),mean,emb+L1,3.07,0.45,2.53,7.72,10729
+BAAI/bge-base-en-v1.5,a recipe with {},cls,L1,2.35,0.93,2.27,4.76,10729
+BAAI/bge-base-en-v1.5,a recipe with {},cls,L2,3.79,1.48,3.4,8.14,10729
+BAAI/bge-base-en-v1.5,a recipe with {},cls,L4,3.11,0.71,2.76,7.98,10729
+BAAI/bge-base-en-v1.5,a recipe with {},cls,L6,3.4,1.08,3.33,7.37,10729
+BAAI/bge-base-en-v1.5,a recipe with {},cls,L8,3.6,1.46,3.47,7.24,10729
+BAAI/bge-base-en-v1.5,a recipe with {},cls,L10,4.0,1.61,3.12,8.94,10729
+BAAI/bge-base-en-v1.5,a recipe with {},cls,L12,3.22,0.46,1.73,7.37,10729
+BAAI/bge-base-en-v1.5,a recipe with {},cls,last4,3.16,0.46,2.0,7.81,10729
+BAAI/bge-base-en-v1.5,a recipe with {},cls,all,3.46,0.53,2.33,9.05,10729
+BAAI/bge-base-en-v1.5,a recipe with {},cls,emb+L1,2.24,0.76,2.16,4.87,10729
+BAAI/bge-base-en-v1.5,a recipe with {},mean,L1,3.11,0.57,2.72,7.98,10729
+BAAI/bge-base-en-v1.5,a recipe with {},mean,L2,3.1,0.63,2.87,7.89,10729
+BAAI/bge-base-en-v1.5,a recipe with {},mean,L4,3.19,0.75,2.8,7.62,10729
+BAAI/bge-base-en-v1.5,a recipe with {},mean,L6,3.09,0.67,2.67,7.16,10729
+BAAI/bge-base-en-v1.5,a recipe with {},mean,L8,3.07,0.64,2.7,7.45,10729
+BAAI/bge-base-en-v1.5,a recipe with {},mean,L10,3.07,0.71,2.31,7.54,10729
+BAAI/bge-base-en-v1.5,a recipe with {},mean,L12,3.0,0.31,2.03,7.18,10729
+BAAI/bge-base-en-v1.5,a recipe with {},mean,last4,2.93,0.61,1.88,7.39,10729
+BAAI/bge-base-en-v1.5,a recipe with {},mean,all,3.0,0.58,2.41,6.94,10729
+BAAI/bge-base-en-v1.5,a recipe with {},mean,emb+L1,3.13,0.58,2.54,7.74,10729
+bert-base-cased,{},cls,L1,4.4,2.18,5.01,8.32,10729
+bert-base-cased,{},cls,L2,4.39,2.35,4.24,8.16,10729
+bert-base-cased,{},cls,L4,4.24,2.3,4.21,7.75,10729
+bert-base-cased,{},cls,L6,3.88,1.27,4.57,8.74,10729
+bert-base-cased,{},cls,L8,3.86,1.82,4.17,8.2,10729
+bert-base-cased,{},cls,L10,3.97,1.76,4.08,7.75,10729
+bert-base-cased,{},cls,L12,3.78,1.58,3.73,7.97,10729
+bert-base-cased,{},cls,last4,4.11,1.99,4.18,7.91,10729
+bert-base-cased,{},cls,all,3.96,1.71,3.72,8.85,10729
+bert-base-cased,{},cls,emb+L1,4.4,2.19,4.97,8.33,10729
+bert-base-cased,{},mean,L1,3.4,0.72,3.07,8.89,10729
+bert-base-cased,{},mean,L2,3.65,0.98,3.18,9.27,10729
+bert-base-cased,{},mean,L4,3.74,1.25,3.22,9.39,10729
+bert-base-cased,{},mean,L6,4.37,2.02,3.85,9.21,10729
+bert-base-cased,{},mean,L8,4.17,1.62,4.01,9.47,10729
+bert-base-cased,{},mean,L10,3.97,1.58,3.82,9.11,10729
+bert-base-cased,{},mean,L12,3.35,1.32,3.42,7.76,10729
+bert-base-cased,{},mean,last4,3.85,1.42,3.69,9.25,10729
+bert-base-cased,{},mean,all,3.92,1.35,3.91,9.32,10729
+bert-base-cased,{},mean,emb+L1,3.29,0.75,2.56,9.11,10729
+bert-base-cased,{} (an ingredient),cls,L1,4.03,1.72,4.62,7.89,10729
+bert-base-cased,{} (an ingredient),cls,L2,4.05,1.51,4.36,8.88,10729
+bert-base-cased,{} (an ingredient),cls,L4,3.88,1.48,3.72,8.65,10729
+bert-base-cased,{} (an ingredient),cls,L6,3.69,1.17,4.03,8.7,10729
+bert-base-cased,{} (an ingredient),cls,L8,3.07,1.17,2.9,7.21,10729
+bert-base-cased,{} (an ingredient),cls,L10,3.56,1.5,3.78,7.79,10729
+bert-base-cased,{} (an ingredient),cls,L12,4.33,1.85,4.38,8.67,10729
+bert-base-cased,{} (an ingredient),cls,last4,3.64,1.56,3.48,7.6,10729
+bert-base-cased,{} (an ingredient),cls,all,3.84,1.55,3.91,8.09,10729
+bert-base-cased,{} (an ingredient),cls,emb+L1,4.03,1.72,4.58,7.87,10729
+bert-base-cased,{} (an ingredient),mean,L1,3.52,1.0,2.81,9.3,10729
+bert-base-cased,{} (an ingredient),mean,L2,3.82,1.33,3.5,9.11,10729
+bert-base-cased,{} (an ingredient),mean,L4,3.83,1.16,3.66,8.94,10729
+bert-base-cased,{} (an ingredient),mean,L6,4.49,1.8,4.16,10.29,10729
+bert-base-cased,{} (an ingredient),mean,L8,5.17,2.49,5.42,10.93,10729
+bert-base-cased,{} (an ingredient),mean,L10,5.55,3.25,5.08,10.62,10729
+bert-base-cased,{} (an ingredient),mean,L12,4.7,1.92,4.2,10.91,10729
+bert-base-cased,{} (an ingredient),mean,last4,5.67,3.41,5.22,11.06,10729
+bert-base-cased,{} (an ingredient),mean,all,4.19,1.64,4.0,9.32,10729
+bert-base-cased,{} (an ingredient),mean,emb+L1,3.39,0.7,2.88,9.0,10729
+bert-base-cased,a recipe with {},cls,L1,4.37,1.9,4.89,8.68,10729
+bert-base-cased,a recipe with {},cls,L2,4.44,1.95,5.03,9.2,10729
+bert-base-cased,a recipe with {},cls,L4,3.51,1.03,3.51,8.73,10729
+bert-base-cased,a recipe with {},cls,L6,3.52,1.07,3.47,8.62,10729
+bert-base-cased,a recipe with {},cls,L8,3.48,1.09,3.55,8.07,10729
+bert-base-cased,a recipe with {},cls,L10,3.76,1.15,3.78,8.67,10729
+bert-base-cased,a recipe with {},cls,L12,3.63,1.03,3.42,8.63,10729
+bert-base-cased,a recipe with {},cls,last4,3.72,1.14,3.74,8.39,10729
+bert-base-cased,a recipe with {},cls,all,3.88,1.41,3.55,8.62,10729
+bert-base-cased,a recipe with {},cls,emb+L1,4.37,1.91,4.85,8.62,10729
+bert-base-cased,a recipe with {},mean,L1,3.19,0.69,2.63,8.98,10729
+bert-base-cased,a recipe with {},mean,L2,3.46,0.99,3.03,9.9,10729
+bert-base-cased,a recipe with {},mean,L4,3.44,0.78,3.64,9.56,10729
+bert-base-cased,a recipe with {},mean,L6,3.54,0.95,3.38,10.2,10729
+bert-base-cased,a recipe with {},mean,L8,3.59,0.78,3.47,10.18,10729
+bert-base-cased,a recipe with {},mean,L10,3.64,1.1,3.64,10.06,10729
+bert-base-cased,a recipe with {},mean,L12,3.54,1.1,3.47,9.54,10729
+bert-base-cased,a recipe with {},mean,last4,3.84,1.41,3.75,9.85,10729
+bert-base-cased,a recipe with {},mean,all,3.26,0.79,2.96,9.42,10729
+bert-base-cased,a recipe with {},mean,emb+L1,3.29,0.73,2.67,9.06,10729
